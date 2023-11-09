@@ -2,7 +2,7 @@ stages:
   - build
   - deploy
 variables:
-  IMAGE_NAME: "hermsi/ark-server"
+  IMAGE_NAME: "gligi/ark-server"
 
 services:
   - docker:dind
@@ -32,7 +32,7 @@ build:docker:
     - master
   parallel:
     matrix:
-      - IMAGE_NAME: [ "hermsi/ark-server" ]
+      - IMAGE_NAME: [ "gligi/ark-server" ]
 
 deploy:docker:
   stage: deploy
@@ -59,4 +59,4 @@ deploy:docker:
     - master
   parallel:
     matrix:
-      - IMAGE_NAME: [ "hermsi/ark-server", "quay.io/hermsi1337/ark-server" ]
+      - IMAGE_NAME: [ "gligi/ark-server" ]
