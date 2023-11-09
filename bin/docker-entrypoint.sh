@@ -8,7 +8,12 @@ if [[ ! -d "${ARK_SERVER_VOLUME}" ]]; then
   mkdir -p "${ARK_SERVER_VOLUME}"
 fi
 
+if [[ ! -d "${ARK_CLUSTER_VOLUME}" ]]; then
+  mkdir -p "${ARK_CLUSTER_VOLUME}"
+fi
+
 chown "${STEAM_USER}". "${ARK_SERVER_VOLUME}" || echo "Failed setting rights on ${ARK_SERVER_VOLUME}, continuing startup..."
+chown "${STEAM_USER}". "${ARK_CLUSTER_VOLUME}" || echo "Failed setting rights on ${ARK_CLUSTER_VOLUME}, continuing startup..."
 
 if [[ ! -d ${ARK_TOOLS_DIR} ]]; then
   mv "/etc/arkmanager" "${ARK_TOOLS_DIR}"
