@@ -3,7 +3,7 @@
 set -e
 
 [[ -z "${DEBUG}" ]] || [[ "${DEBUG,,}" = "false" ]] || [[ "${DEBUG,,}" = "0" ]] || set -x
-
+echo "Output variable ARK_SERVER_VOLUME ${ARK_SERVER_VOLUME}, is it?"
 if [[ ! -d "${ARK_SERVER_VOLUME}" ]]; then
   mkdir -p "${ARK_SERVER_VOLUME}"
 fi
