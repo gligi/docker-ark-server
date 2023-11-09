@@ -17,6 +17,6 @@ jobs:
     - name: docker login
       run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag gligi/ark-server:v1
+      run: docker build . --file Dockerfile --tag gligi/ark-server:latest
     - name: Docker Push
-      run: docker push gligi/ark-server:v1
+      run: docker push gligi/ark-server:latest
