@@ -39,6 +39,8 @@ The basic configuration of your server is done by using environment variables wh
 | ENABLE_CROSSPLAY | false | Enable crossplay. When enabled battleye should be disabled as it likes to disconnect epic players |
 | DISABLE_BATTLEYE | false | Disable Battleye protection |
 | ARK_SERVER_VOLUME | /app | Path where the server-files are stored |
+| ARK_CLUSTER_VOLUME | /cluster | Path where the cluster-files are stored (must be same for all images) |
+| ARK_CLUSTER_ID | Id of the cluster (must be same for all images) |
 | GAME_CLIENT_PORT | 7777 | Exposed game-client port |
 | UDP_SOCKET_PORT | 7778 | Raw UDP socket port (always Game client port +1) |
 | RCON_PORT | 27020 | Exposed RCON port |
