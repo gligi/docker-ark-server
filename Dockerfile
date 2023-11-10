@@ -20,6 +20,7 @@ ENV         IMAGE_VERSION="${IMAGE_VERSION}" \
             ARK_SERVER_VOLUME="/app" \
             ARK_CLUSTER_VOLUME="/cluster" \
             ARK_CLUSTER_ID="myclusterid" \
+            ARK_BACKUP_VOLUME="backup" \
             TEMPLATE_DIRECTORY="/conf.d" \
             GAME_CLIENT_PORT="7777" \
             UDP_SOCKET_PORT="7778" \
