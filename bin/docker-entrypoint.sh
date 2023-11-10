@@ -3,15 +3,11 @@
 set -e
 
 [[ -z "${DEBUG}" ]] || [[ "${DEBUG,,}" = "false" ]] || [[ "${DEBUG,,}" = "0" ]] || set -x
-echo "Output variable ARK_SERVER_VOLUME ${ARK_SERVER_VOLUME}, is it?"
 if [[ ! -d "${ARK_SERVER_VOLUME}" ]]; then
-  echo "Creating ARK_SERVER_VOLUME ${ARK_SERVER_VOLUME}"
   mkdir -p "${ARK_SERVER_VOLUME}"
 fi
 
-echo "Output variable ARK_CLUSTER_VOLUME ${ARK_CLUSTER_VOLUME}, is it?"
 if [[ ! -d "${ARK_CLUSTER_VOLUME}" ]]; then
-  echo "Creating ARK_CLUSTER_VOLUME ${ARK_CLUSTER_VOLUME}"
   mkdir -p "${ARK_CLUSTER_VOLUME}"
 fi
 
