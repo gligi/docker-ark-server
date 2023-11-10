@@ -31,6 +31,8 @@ services:
       - WARN_ON_STOP=${WARN_ON_STOP}
       - GAME_MOD_IDS=${GAME_MOD_IDS}
       - ARK_CLUSTER_VOLUME=${ARK_CLUSTER_VOLUME}
+      - DISABLE_BATTLEYE=${DISABLE_BATTLEYE}
+      - ENABLE_CROSSPLAY=${ENABLE_CROSSPLAY}
     ports:
       # Port for connections from ARK game client
       - "7777:7777/udp"
